@@ -333,14 +333,36 @@ nav .container {
     overflow: hidden;
 }
 
-.skill-progress {
+/* .skill-progress {
     height: 100%;
     background-color: var(--primary-color);
     border-radius: 5px;
     width: 0;
     transition: width 1.5s ease;
+} */
+
+/*  added utility classes  */
+/* Width utility classes */
+.w-100 { width: 100%; }
+.w-95  { width: 95%; }
+.w-90  { width: 90%; }
+.w-85  { width: 85%; }
+.w-80  { width: 80%; }
+.w-75  { width: 75%; }
+.w-70  { width: 70%; }
+.w-65  { width: 65%; }
+.w-60  { width: 60%; }
+.w-50  { width: 50%; }
+/* Add more as needed */
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 1.5s ease;
 }
 
+/*  end of utility classes */
 .skill-progress.html {
     width: 90%;
 }
@@ -450,6 +472,46 @@ nav .container {
     color: var(--text-light);
 }
 
+.timeline-content p a {
+    color: var(--primary-color); /* matches your theme */
+    text-decoration: none;
+    font-weight: 500; /* slight emphasis */
+    transition: color 0.3s ease;
+}
+
+.timeline-content p a:hover {
+    color: #1a78d7; /* darker version of your --primary-color */
+    text-decoration: none; /* optional: cleaner hover */
+}
+
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+ .timeline-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+ .timeline-content ul li::before {
+    content: '•'; /* or use '\2022' for Unicode bullet */
+    position: absolute;
+    left: 0;
+    top: 0.1em; /* aligns vertically better */
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem; /* <-- increase this for a bigger bullet */
+}
+
+
+
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -546,6 +608,31 @@ nav .container {
     border-radius: 5px;
     font-size: 0.8rem;
     color: var(--dark-color);
+}
+
+
+.project-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.project-info ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+ .project-info ul li::before {
+    content: '•'; /* or use '\2022' for Unicode bullet */
+    position: absolute;
+    left: 0;
+    top: 0.1em; /* aligns vertically better */
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem; /* <-- increase this for a bigger bullet */
 }
 
 /* Contact Section */
